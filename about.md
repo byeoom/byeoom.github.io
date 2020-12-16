@@ -1,10 +1,7 @@
 ---
 layout: page
-title: About
+title: 안녕하세요 성병모입니다.
 ---
-
-Hello.
-
-This will be your About page. Anything about you, it should be written here in details. You may describe your bio here like who you are, what you do, your intention, social site hyperlinks and how people can contact you, etc.
-
-**Less is more..**
+저는 서울사는 개발자입니다.<br/>
+블로그 해보고싶어서 만들었습니다.<br/>
+**열심히 해볼게여!**
