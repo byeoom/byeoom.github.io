@@ -3,8 +3,12 @@ layout: page
 title: About
 ---
 
-Hello.
+안녕하세요 성병모입니다.
+서울에서 지내고 있습니다.
 
-This will be your About page. Anything about you, it should be written here in details. You may describe your bio here like who you are, what you do, your intention, social site hyperlinks and how people can contact you, etc.
+**경력**
+2018.08 ~ 2023.01 
+롯데렌탈 묘미(MYOMEE) 운영
 
-**Less is more..**
+2023.01 ~
+전자계약서비스(ECS) I/F 개발 및 운영 보조
