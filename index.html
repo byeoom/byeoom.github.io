@@ -9,11 +9,16 @@ layout: default
 			{% assign tagArr = tagArr | append:tag | append:',' %}
 			{% capture tagName %}{{ tag }}{% endcapture %}
 
+			{% raw %} 
 			tagArr : {{ tagArr }} / tagName : {{ tagName }} <br>
+			{% endraw %}
 	
-			{% unless tagArr contains tagName %}
+			{% if tagArr contains tagName %}
+				TRUE <br>
 				<span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
-			{% endunless %}
+			{% else %}
+				FALSE <br>
+			{% endif %}
 		{% endfor %}
 	{% endfor %}
 
