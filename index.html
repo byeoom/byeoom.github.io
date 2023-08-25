@@ -4,16 +4,15 @@ layout: default
 
 <section>
 
-	{% assign tagArr = "" | split: ',' %}
-	
 	{% for post in site.posts %}
 		{% for tag in post.tags %}
 			{% assign tagArr = tagArr | append:tag | append:',' %}
+			tagArr : {{tagArr}}
 			<span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
 		{% endfor %}
 	{% endfor %}
 
-	tagArr : {{tagArr}}
+	
 
 
 
