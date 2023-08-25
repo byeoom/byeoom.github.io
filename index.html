@@ -6,11 +6,11 @@ layout: default
 
 	{% for post in site.posts %}
 		{% for tag in post.tags %}
-			<span class="tag">{{ tag }}</span>
+			<span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
 		{% endfor %}
 	{% endfor %}
 
-	<div class="divider"></div>
+	<hr>
 	
 	{% for post in site.posts %}
 		{% unless post.next %}
