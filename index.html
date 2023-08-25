@@ -4,6 +4,14 @@ layout: default
 
 <section>
 
+	{% if page.tags %}
+	  {% for tag in page.tags %}
+	    <span class="tag">{{ tag }}</span>
+	  {% endfor %}
+	{% endif %}
+
+	---
+	
 	{% for post in site.posts %}
 		{% unless post.next %}
 			<h3 class="code">{{ post.date | date: '%Y' }}</h3>
@@ -29,10 +37,6 @@ layout: default
 	{% endfor %}
 
 
-	{% for tag in site.tags %}
-	<h3>{{ tag }}</h3>
-	
-	{% endfor %}
 
 	
 </section>
