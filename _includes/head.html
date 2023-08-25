@@ -24,42 +24,41 @@
 <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
 <script type="text/javascript">
   $(document).ready(function () {
-
-    var curTag = "";
 	  
     /* tag click event */
     $('.tag').click(function(){
-      curTag = $(this).data('tag');
+	    var curTag = $(this).data('tag');
+	    var initAllYn = "N";
 	    
-      filterByTagName(curTag); /**/
-      
-      if($(this).hasClass('selected') === false) {
-        $(".tag").removeClass('selected');
-	$(this).addClass('selected');
-      }else{
-	$(this).removeClass('selected');
-      }
-
+	    if($(this).hasClass('selected') === false) {
+		    $(".tag").removeClass('selected');
+		    $(this).addClass('selected');
+	    }else{
+		    $(this).removeClass('selected');
+		    initAllYn = "Y";
+	    }
+	    
+	    filterByTagName(curTag, initAllYn);
     });
 
-    function filterByTagName(curTag){
-      console.log("filterByTagName 진입##");
-	    var dt = "data-"+curTag;
-
-      $('section > ul').each(function(index, item){
-        
-	console.log("dt >> "+dt) ;
-	console.log("index > "+index);
-	console.log(item);
-	
-	if(!item.hasAttribute(dt)){
-	  $(item).addClass('hidden');
+    /* list filtering function */
+    function filterByTagName(curTag, initAllYn){
+	if(initAllYn === "Y"){
+		$('section > ul').removeClass('hidden');
+	}else{
+		var dataTag = "data-"+curTag;
+		$('section > ul').each(function(index, item){
+			console.log("dt >> "+dt) ;
+			console.log("index > "+index);
+			console.log(item);
+			if(!item.hasAttribute(dataTag)){
+				$(item).addClass('hidden');
+			}else{
+				$(item).removeClass('hidden');
+			}
+		});
 	}
-      });
-	    
     }
-
-	  
   });
 </script>
 
