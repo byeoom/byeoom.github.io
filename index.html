@@ -7,21 +7,18 @@ layout: default
 	{% for post in site.posts %}
 		{% for tag in post.tags %}
 			{% assign tagArr = tagArr | append:tag | append:',' %}
-			{% capture tagName %}{{ tag }}{% endcapture %}
-
-			{% raw %} 
-			tagArr : {{ tagArr }} / tagName : {{ tagName }} <br>
-			{% endraw %}
-	
-			{% if tagArr contains tagName %}
-				TRUE <br>
-				<span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
-			{% else %}
-				FALSE <br>
-			{% endif %}
 		{% endfor %}
 	{% endfor %}
 
+	before tagArr : {{ tagArr }} <br>
+	
+	{% assign tagArr = tagArr | split:", " | uniq | sort %}
+
+	after tagArr : {{ tagArr }} <br>
+	
+	{% for tag in tagArr %}
+	    <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
+	{% endfor %}
 	
 
 
