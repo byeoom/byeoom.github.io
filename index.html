@@ -12,6 +12,25 @@ layout: default
 
 	<hr>
 	
+	{% for post in site.pages %}
+		{% for tag in post.tags %}
+			{% assign tagArr = tagArr | append:tag | append:', ' %}
+		{% endfor %}
+	{% endfor %} 
+	
+	tagArr1:{{tagArr}}
+	
+	{% assign tagArr = tagArr | split:", " | uniq | sort %}
+	
+	tagArr2:{{tagArr}}
+	
+	{% for tag in tagArr %}
+		{% capture tag_name %}{{ tag }}{% endcapture %}
+		<span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
+	{% endfor %}
+	
+	<hr>
+	
 	{% for post in site.posts %}
 		{% unless post.next %}
 			<h3 class="code">{{ post.date | date: '%Y' }}</h3>
