@@ -8,12 +8,12 @@ layout: default
 	
 	{% for post in site.posts %}
 		{% for tag in post.tags %}
-			{% assign tagArr = tagArr | push: tag %}
+			{% assign tagArr = tagArr | append:tag | append:',' %}
 			<span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
 		{% endfor %}
 	{% endfor %}
 
-	tagArr : {{tagArr}}
+
 
 	
 	<hr>
