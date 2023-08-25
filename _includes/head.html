@@ -47,9 +47,13 @@
 	    var dt = "data-"+curTag;
 
       $('section > ul').each(fucntion(index, item){
-        if(!item.hasAttribute(dt)){
+        
+	console.log("dt >> "+dt) ;
+	console.log(item);
+	/*
+	if(!item.hasAttribute(dt)){
 	  $(item).addClass('hidden');
-	} 
+	} */
       });
 	    
     }
