@@ -7,8 +7,10 @@ layout: default
 	{% for post in site.posts %}
 		{% for tag in post.tags %}
 			{% assign tagArr = tagArr | append:tag | append:',' %}
-			tagArr : {{ tagArr }} / tag : {{ tag }} <br>
 			{% capture tagName %}{{ tag }}{% endcapture %}
+
+			tagArr : {{ tagArr }} / tagName : {{ tagName }} <br>
+	
 			{% unless tagArr contains tagName %}
 				<span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
 			{% endunless %}
