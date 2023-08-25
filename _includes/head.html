@@ -33,14 +33,17 @@
 	    
       filterByTagName(curTag); /**/
       
-      $(".tag").removeClass('selected');
       if($(this).hasClass('selected') === false) {
-        $(this).addClass('selected');
+        $(".tag").removeClass('selected');
+	$(this).addClass('selected');
+      }else{
+	$(this).removeClass('selected');
       }
+
     });
 
     function filterByTagName(curTag){
-      console.log("filterByTagName 진입@@@");
+      console.log("filterByTagName 진입##");
     }
 
 	  
