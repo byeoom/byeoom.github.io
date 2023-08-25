@@ -3,26 +3,20 @@ layout: default
 ---
 
 <section>
-
+	{% comment %}tagArr 배열 선언 및 값 할당{% endcomment %}
 	{% for post in site.posts %}
 		{% for tag in post.tags %}
 			{% assign tagArr = tagArr | append:tag | append:',' %}
 		{% endfor %}
 	{% endfor %}
 
-	before tagArr : {{ tagArr }} <br>
-	
+	{% comment %}tagArr 중복 제거하여 실제 배열형식으로 분할{% endcomment %}
 	{% assign tagArr = tagArr | split:"," | uniq | sort %}
 
-	after tagArr : {{ tagArr }} <br>
-	
+	{% comment %}실제 tag 목록{% endcomment %}
 	{% for tag in tagArr %}
 	    <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
 	{% endfor %}
-	
-
-
-
 	
 	<hr>
 	
@@ -40,7 +34,7 @@ layout: default
 		<ul>
 			<li>
 				<div class="post-date code">
-					<span>{{ post.date | date: '%F' }}</span>
+					<span>{{ post.date | date: "%m %d" }}</span>
 				</div>
 				<div class="title">
 					<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
