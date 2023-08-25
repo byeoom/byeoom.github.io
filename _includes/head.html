@@ -44,9 +44,10 @@
 
     function filterByTagName(curTag){
       console.log("filterByTagName 진입##");
+	    var dt = "data-"+curTag;
 
       $('section > ul').each(fucntion(index, item){
-        if(!item.hasAttribute(`data-${curTag}`)){
+        if(!item.hasAttribute(dt)){
 	  $(item).addClass('hidden');
 	} 
       });
