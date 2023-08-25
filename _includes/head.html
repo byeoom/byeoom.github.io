@@ -28,13 +28,15 @@
     var curTag = "";
 	  
     /* tag click event */
-    $(".tag").click(function(){
+    $('.tag').click(function(){
       curTag = $(this).data('tag');
 	    
       filterByTagName(curTag); /**/
       
       $(".tag").removeClass('selected');
-      $(this).addClass('selected');
+      if($(this).hasClass('selected') === false) {
+        $(this).addClass('selected');
+      }
     });
 
     function filterByTagName(curTag){
