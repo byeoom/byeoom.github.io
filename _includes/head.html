@@ -22,6 +22,10 @@
 
 <!-- jQuery Core 3.7.0 slim minified -->
 <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+<!-- tag click event -->
+$(".tag").click(function(){
+	console.log("클릭 >> "+$(this).data('tag'));
+});
 
 {% if site.social_share_previews %}
 	<meta property="og:title" content="{{ site.title }}">
