@@ -12,7 +12,7 @@ layout: default
 
 	before tagArr : {{ tagArr }} <br>
 	
-	{% assign tagArr = tagArr | split:", " | uniq | sort %}
+	{% assign tagArr = tagArr | split:"," | uniq | sort %}
 
 	after tagArr : {{ tagArr }} <br>
 	
