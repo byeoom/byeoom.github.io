@@ -7,8 +7,10 @@ layout: default
 	{% for post in site.posts %}
 		{% for tag in post.tags %}
 			{% assign tagArr = tagArr | append:tag | append:',' %}
-			tagArr : {{tagArr}}
-			<span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
+			tagArr : {{tagArr}} <br>
+			{% unless tagArr contains tag %}
+				<span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
+			{% endunless %}
 		{% endfor %}
 	{% endfor %}
 
