@@ -9,9 +9,10 @@ layout: default
 		<time class="code">{{ page.date | date: '%F' }}</time>
 		<div>
 			{% for tag in page.tags %}
-				<span class="tag">{{ tag }}</span>
+				<span class="code">{{ tag }}</span>
 			{% endfor %}
 		</div>
+		<div class="code">{{ page.tags }}</div>
 	</div>
 
 	<div class="divider"></div>
