@@ -8,7 +8,7 @@ layout: default
 		<h1 class="title">{{ page.title }}</h1>
 		<time class="code">{{ page.date | date: '%F' }}</time>
 		
-		{% for tag in post.tags %}
+		{% for tag in page.tags %}
 			<span class="tag">{{ tag }}</span>
 		{% endfor %}
 	</div>
