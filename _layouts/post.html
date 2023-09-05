@@ -7,7 +7,7 @@ layout: default
 	<div class="center">
 		<h1 class="title">{{ page.title }}</h1>
 		<time class="code">{{ page.date | date: '%F' }}</time>   
-		<div>
+		<div id="tag-list">
 			{% for tag in page.tags %}
 				<span class="tag">{{ tag }}</span>
 			{% endfor %}
