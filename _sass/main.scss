@@ -305,8 +305,10 @@ article {
   display: block;
 }
 .tag {
-  border:1px solid black;
-  padding:1px;
+  border: 1px solid black;
+  padding: 2px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .selected {
   background-color:black;
