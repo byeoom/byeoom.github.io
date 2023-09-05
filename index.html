@@ -14,10 +14,12 @@ layout: default
 	{% assign tagArr = tagArr | split:"," | uniq | sort %}
 
 	<!-- 실제 tag 목록 -->
-	<img src="./assets/icon_tag_24x24.png" alt="tag"/>
-	{% for tag in tagArr %}
-	    <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
-	{% endfor %}
+	<div>
+		<img src="./assets/icon_tag_24x24.png" alt="tag"/>
+		{% for tag in tagArr %}
+		    <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
+		{% endfor %}
+	</div>
 	
 	<hr>
 	
