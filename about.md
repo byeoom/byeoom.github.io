@@ -6,7 +6,7 @@ title: 🤓
 안녕하세요, 성병모 입니다.   
 서울에서 지내고 있습니다.   
 
-[![instagram](./assets/iconmonstr-instagram-11-32.png)](https://www.instagram.com/byeoom)
+[![instagram](./assets/icon_instagram_32x32.png)](https://www.instagram.com/byeoom)
 
 ---
 
