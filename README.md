@@ -10,6 +10,7 @@ https://byeoom.github.io
 
 ## Dev list
 - 2023.09.04 Tag별 게시글 분류 기능 추가.
+- 2023.09.12 utterances를 사용하여 댓글 기능 추가.
 
 
 
