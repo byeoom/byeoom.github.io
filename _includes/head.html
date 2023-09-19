@@ -1,5 +1,5 @@
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 {% if page.title %}
@@ -8,7 +8,7 @@
 	<title>{{ site.title }}</title>
 {% endif %}
 
-<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
 
 <link rel="icon" href="{{ "/assets/favicon.png" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="apple-touch-icon" href="{{ "/assets/touch-icon.png" | prepend: site.baseurl | prepend: site.url }}">
@@ -60,12 +60,11 @@
 </script>
 
 {% if site.social_share_previews %}
-	<meta property="og:title" content="{{ site.title }}">
-	<meta property="og:description" content="{{ site.description }}">
-	<meta property="og:image" content="{{ site.logo_url }}">
-	<meta property="og:url" content="{{ site.url }}">
-	<meta name="twitter:card" content="summary_large_image">
-
-	<meta property="og:site_name" content="{{ site.title }}">
-	<meta name="twitter:image:alt" content="{{ site.author_name }}">
+	<meta property="og:title" content="{{ site.title }}" />
+	<meta property="og:description" content="{{ site.description }}" />
+	<meta property="og:image" content="{{ site.logo_url }}" />
+	<meta property="og:url" content="{{ site.url }}" />
+	<meta property="og:site_name" content="{{ site.title }}" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image:alt" content="{{ site.author_name }}" />
 {% endif %}
